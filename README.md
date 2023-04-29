@@ -1,8 +1,8 @@
-# Code-Snippets-4-Web-Developers-
+# Code-Snippets-4-Web-Developers
 
 Collection of small, reusable pieces of code or scripts that are intended for use by web developers.
 These code snippets or scripts are often designed to be highly modular and reusable, meaning that they can be easily adapted to fit into different web development projects with minimal modifications. This makes them a powerful tool for web developers who work on a wide variety of projects, as they can quickly implement solutions that have already been tested and optimized for performance.
-
+  
 
 - Design
   - [HeightEqualizer.js] Equalize the height of class elements 
