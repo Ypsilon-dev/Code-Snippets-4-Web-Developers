@@ -1,0 +1,45 @@
+/*The tooltip is displayed when the user hovers over an HTML element with the tooltip-container class.
+Examle code:
+  <span class="tooltip-container">Laufweg Abholadresse in km
+  <span class="tooltiptext">Die Entfernung zwischen dem Parkplatz und der Haus- und Wohnungstür</span>
+  </span>
+*/
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container::after {
+  content: "?";
+  display: inline-block;
+  font-size: 0.6em;
+  color: #fff;
+  margin-left: 5px;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #142042;
+  padding: 4px;
+}
+
+.tooltip-container:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip-container .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  width: 300px;
+  background-color: #142042;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  z-index: 1;
+}
