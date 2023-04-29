@@ -5,7 +5,7 @@ These code snippets or scripts are often designed to be highly modular and reusa
 
 
 - Design
-  - Equalize the height of class elements -> [link:HeightEqualizer.js]
+  - Equalize the height of class elements -> [HeightEqualizer.js]
   - Truncates a text of a defined maximum number of words, and adds ellipses at the end -> [link:MaxTextWords.js]
   - ....
 - Functional
@@ -13,6 +13,6 @@ These code snippets or scripts are often designed to be highly modular and reusa
   - ....
 
 
-[link:HeightEqualizer.js]:/Design/HeightEqualizer.js
+[HeightEqualizer.js]:/Design/HeightEqualizer.js
 [link:MaxTextWords.js]:/Design/MaxTextWords.js
 [link:GooglePlaceDistanceForm.js]:/Functional/GooglePlaceDistanceForm.js
