@@ -5,11 +5,11 @@ These code snippets or scripts are often designed to be highly modular and reusa
 
 
 - Design
-  - Equalize the height of class elements -> [HeightEqualizer.js]
-  - Truncates a text of a defined maximum number of words, and adds ellipses at the end -> [MaxTextWords.js]
+  - [HeightEqualizer.js] Equalize the height of class elements 
+  - [MaxTextWords.js] Truncates a text of a defined maximum number of words, and adds ellipses at the end 
   - ....
 - Functional
-  - Implementation of Form using Google Place Autocomplete & Distance Measure between 2 places (GDPR) -> [GooglePlaceDistanceForm.js]
+  - [GooglePlaceDistanceForm.js] Implementation of Form using Google Place Autocomplete & Distance Measure between 2 places (GDPR)
   - ....
 
 
