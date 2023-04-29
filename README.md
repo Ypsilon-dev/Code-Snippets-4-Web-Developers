@@ -14,4 +14,4 @@ These code snippets or scripts are often designed to be highly modular and reusa
 [HeightEqualizer.js]: /Design/HeightEqualizer.js
 [MaxTextWords.js]: /Design/MaxTextWords.js
 [SimpleTooltip.css]: /Design/SimpleTooltip.css
-[GooglePlaceDistanceCF7Form.html]: /Functional/GooglePlaceDistanceForm.html
+[GooglePlaceDistanceCF7Form.html]: /Functional/GooglePlaceDistanceCF7Form.html
