@@ -30,16 +30,25 @@ Examle code:
 }
 
 .tooltip-container .tooltiptext {
+  line-height: normal;
+  font-size: 0.8em;
   visibility: hidden;
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: auto;
   transform: translateX(-50%);
   padding: 5px;
-  width: 300px;
+  width: 280px;
   background-color: #142042;
   color: #fff;
   text-align: center;
   border-radius: 4px;
   z-index: 1;
+}
+
+@media all and (max-width: 479px) {
+  .tooltip-container .tooltiptext {
+    left: 50%;
+    width: 200px;
+  }
 }

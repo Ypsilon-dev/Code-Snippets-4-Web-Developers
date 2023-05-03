@@ -1,267 +1,154 @@
-<!-- To Change: 1.Link of website privacy policy 2.Gmaps API  3.add this line to wp-config.php to remove <p> and <br /> from Contact Form 7 define('WPCF7_AUTOP', false );-->
-<div class="wps-form">
-  <div class="cf7-text-custom">
-    Wählen Sie eine Option für die Umzugsplanung aus
-  </div>
-  [radio DatumRadio use_label_element default:2 "Der Umzug ist Flexibel"
-  "Umzugsdatum eingeben" ] [group Datum] [date umzugsdatum min:2022-05-23
-  max:2028-10-17] [/group]
-  <br />
 
-  <span class="tooltip-container">
-    Eingabe der Abhol- und Zieladresse
-    <span class="tooltiptext"
+  <label class="tooltip-container cf7-text-custom">
+    Eingabe der Abhol- und Zieladresse (Es gelten die
+    <a href="https://website.de/datenschutz/"><u>Datenschutzverordnung</u></a>
+    (DS-GVO))<span class="tooltiptext"
       >Sie haben die Wahl, ob Sie die Adresse automatisch korrigieren lassen
       oder sie manuell eingeben möchten. Wir empfehlen Ihnen, die automatische
       Vervollständigung zu nutzen, damit wir auch die Entfernung berechnen und
       Ihnen schnell ein Angebot unterbreiten können. Bitte beachten Sie dabei
       unsere Datenschutzbestimmungen, da die automatische Vervollständigung ein
       Drittanbieter-Service von Google nutzt.</span
-    ></span
-  >
-  [radio Autocomplete use_label_element default:2 "Auto Vervollständigung"
-  "Manuelle Eingabe"] [group adresse-auto]
-  <span class="cf7-text-custom">Abholadresse</span>
-  [text* starting_location id:starting_location placeholder "Enter starting
-  location"]
-  <span class="cf7-text-custom">Zieladresse</span>
-  [text* ending_location id:ending_location placeholder "Enter ending location"]
-  <span class="cf7-text-custom"
-    >Die Entfernung zwischen Abhol- und Zieladresse</span
-  >
-  [text distance id:distance readonly] [/group] [group adresse-manuell]
-  <span class="cf7-text-custom">Abholadresse</span>
-  [text* starting_location id:starting_location placeholder "Enter starting
-  location"]
-  <span class="cf7-text-custom">Zieladresse</span>
-  [text* ending_location id:ending_location placeholder "Enter ending location"]
-  [/group]
-
-  <div class="tooltip-container cf7-text-custom">
-    Laufweg Abholadresse in km<span class="tooltiptext"
-      >Die Entfernung zwischen dem Parkplatz und der Haus- oder Wohnungstür an
-      der Abholadresse</span
     >
-  </div>
-  [number starting_location_path min:1 max:9999]
-
-  <span class="tooltip-container cf7-text-custom"
-    >Laufweg Zieladresse in km<span class="tooltiptext"
-      >Die Entfernung zwischen dem Parkplatz und der Haus- oder Wohnungstür an
-      der Beladeadresse</span
-    ></span
+  </label>
+  [radio autocomplete_address use_label_element default:2 "Auto Vervollständigung" "Manuelle Eingabe"] [group adresse_auto]
+  <label class="cf7-text-custom">Abholadresse</label>
+  [text* starting_location id:starting_location placeholder "Musterstr. 34,
+  93059 Musterdorf"]
+  <label class="cf7-text-custom">Zieladresse</label>
+  [text* ending_location id:ending_location placeholder "Musterstr. 34, 93059
+  Musterdorf"]
+  <label class="cf7-text-custom"
+    >Die Entfernung zwischen Abhol- und Zieladresse</label
   >
-  [number ending_location_path min:1 max:9999]
-
-  <div class="cf7-text-custom">Wie viele Zimmer?</div>
-  [number* Zim-Anz min:1 max:99]
-
-  <div class="cf7-text-custom">
-    Verbessern Sie Ihre Umzugserfahrung mit unseren Zusatzservices
-  </div>
-  [checkbox Zusatzservices use_label_element "Kartons einpacken" "Möbel
-  montieren" "Küche montieren" "Möbel demontieren" "Küche demontieren"]
+  [text distance id:distance readonly] [/group] [group adresse_manuell]
+  <label class="cf7-text-custom">Abholadresse</label>
+  [text* starting_location id:starting_location placeholder "Musterstr. 34,
+  93059 Musterdorf"]
+  <label class="cf7-text-custom">Zieladresse</label>
+  [text* ending_location id:ending_location placeholder "Musterstr. 34, 93059
+  Musterdorf"] [/group]
 
   <div class="cf7-text-custom">
-    Wer bezahlt den Umzug? Informationen zur Kostenübernahme
-  </div>
-  [select* Kostenuebernahme include_blank "Privat" "Geschäftlich" "Bezuschusste
-  Umzüge (Soziale Ämter)"]
-
-  <div class="cf7-text-custom">
-    Bitte laden Sie bei Bedarf Bilder Ihrer Möbel hoch
-  </div>
-
-  [mfile umzugAttachments limit:10485760
-  filetypes:pdf|jpg|png|webp|tiff|raw|bmp|heif|indd|jp2|j2k|jpf|jpg2|jpx|jpm|mj2|mjp2
-  min-file:1 max-file:40]
-
-  <div class="cf7-text-custom">Ihr Name</div>
-  [text* your-name]
-
-  <div class="cf7-text-custom">Ihre E-Mail-Adresse</div>
-  [email* your-email]
-
-  <div class="cf7-text-custom">Ihre Rufnummer</div>
-  [number* rufnummer]
-
-  <div class="cf7-text-custom">Ihre Nachricht oder Bemerkung (optional)</div>
-  [textarea your-message]
-
-  <div class="cf7-text-custom">
-    <a href="https://website.de/datenschutz/">Datenschutzerklärung</a><br />
+    <a href="https://website.de/datenschutz/"><u>Datenschutzerklärung</u></a
+    ><br />
     [checkbox* gdpr use_label_element "Ich habe die Datenschutzerklärung gelesen
-    und stimme der Verarbeitung meiner persönlichen Daten zu."] [submit
-    "Absenden" class:absenden]
+    und stimme der Verarbeitung meiner persönlichen Daten zu."]
   </div>
-
-  <style>
-    .tooltip-container {
-      position: relative;
-      display: inline-block;
-    }
-
-    .tooltip-container::after {
-      content: "?";
-      display: inline-block;
-      font-size: 0.6em;
-      color: #fff;
-      margin-left: 5px;
-      cursor: pointer;
-      width: 10px;
-      height: 10px;
-      line-height: 10px;
-      text-align: center;
-      border-radius: 50%;
-      background-color: #142042;
-      padding: 4px;
-    }
-
-    .tooltip-container:hover .tooltiptext {
-      visibility: visible;
-    }
-
-    .tooltip-container .tooltiptext {
-      visibility: hidden;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 5px;
-      width: 300px;
-      background-color: #142042;
-      color: #fff;
-      text-align: center;
-      border-radius: 4px;
-      z-index: 1;
-    }
-
-    .wpcf7-list-item {
-      display: block;
-    }
-    div.cf7-text-custom {
-      padding: 10px 0;
-
-      font-size: 16px;
-    }
-
-    @media all and (max-width: 479px) {
-      div.cf7-text-custom {
-        padding: 5px 0;
-
-        font-size: 13px;
-      }
-    }
-
-    input.wpcf7-form-control.wpcf7-validates-as-date {
-      flex-direction: row-reverse;
-    }
-  </style>
-  <script>
-    /*Contact Form 7 chrome date bug (i had no time to find it) remove the class did the work*/
-    $(document).ready(function () {
-      $("input.wpcf7-date").removeClass("wpcf7-date");
-    });
-
-    $(document).ready(function () {
-      // Attach a click event listener to input elements with the name "Autocomplete"
-      $('input[name="Autocomplete"]').click(function () {
-        // Check if the value of the clicked input element is "Auto Vervollständigung"
-        if ($(this).val() == "Auto Vervollständigung") {
-          // If the value is "Auto Vervollständigung", call the Gmaps script - You have to add notice to comply GDPR
-          var script = document.createElement("script");
-          script.src =
-            "https://maps.googleapis.com/maps/api/js?key=<API_KEY>&libraries=places&callback=initAutocomplete";
-
-          // Append the script element to the head of the document
-          document.head.appendChild(script);
-        }
-      });
-    });
-
-    function initAutocomplete() {
-      // Get references to the starting location, ending location, and distance input elements
-      var starting_location_input =
-        document.getElementById("starting_location");
-      var ending_location_input = document.getElementById("ending_location");
-      var distance_input = document.getElementById("distance");
-
-      // Create new autocomplete objects for the starting and ending location input fields
-      var starting_location_autocomplete = new google.maps.places.Autocomplete(
-        starting_location_input
-      );
-      var ending_location_autocomplete = new google.maps.places.Autocomplete(
-        ending_location_input
-      );
-
-      // Create new geocoder and distance matrix service objects
-      var geocoder = new google.maps.Geocoder();
-      var distance_service = new google.maps.DistanceMatrixService();
-
-      // Attach a listener to the autocomplete objects that calculates the distance between the starting and ending locations whenever they change
-      starting_location_autocomplete.addListener(
-        "place_changed",
-        calculateDistance
-      );
-      ending_location_autocomplete.addListener(
-        "place_changed",
-        calculateDistance
-      );
-
-      function calculateDistance() {
-        // Get the values of the starting and ending location input fields
-        var starting_location_value = starting_location_input.value;
-        var ending_location_value = ending_location_input.value;
-
-        // If both input fields have a value, geocode the starting and ending locations and calculate the distance between them
-        if (starting_location_value && ending_location_value) {
-          // Geocode the starting location
-          geocoder.geocode(
-            { address: starting_location_value },
-            function (results, status) {
-              if (status == google.maps.GeocoderStatus.OK) {
-                var starting_location_latlng = results[0].geometry.location;
-
-                // Geocode the ending location
-                geocoder.geocode(
-                  { address: ending_location_value },
-                  function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                      var ending_location_latlng = results[0].geometry.location;
-
-                      // Calculate the distance between the starting and ending locations
-                      distance_service.getDistanceMatrix(
-                        {
-                          origins: [starting_location_latlng],
-                          destinations: [ending_location_latlng],
-                          // Driving (car) TravelMode - https://developers.google.com/maps/documentation/transportation-logistics/on-demand-rides-deliveries-solution/pickup-and-dropoff-selection/location-selection/reference/rest/v1beta/TravelMode
-                          travelMode: google.maps.TravelMode.DRIVING,
-                          unitSystem: google.maps.UnitSystem.METRIC,
-                        },
-                        function (response, status) {
-                          if (status == google.maps.DistanceMatrixStatus.OK) {
-                            // Set the value of the distance input field to the calculated distance in kilometers
-                            var distance =
-                              response.rows[0].elements[0].distance.value /
-                              1000;
-                            distance_input.value = distance.toFixed(2) + " km";
-                          } else {
-                            alert("Error: " + status);
-                          }
-                        }
-                      );
-                    } else {
-                      alert("Error: " + status);
-                    }
-                  }
-                );
-              } else {
-                alert("Error: " + status);
-              }
-            }
-          );
-        }
-      }
-    }
-  </script>
+  [submit "Absenden" class:absenden]
 </div>
+
+<script>
+
+  $(document).ready(function () {
+    // Attach a click event listener to input elements with the name "Autocomplete"
+    $('input[name="autocomplete_address"]').click(function () {
+      // Check if the value of the clicked input element is "Auto Vervollständigung"
+      if ($(this).val() == "Auto Vervollständigung") {
+        // If the value is "Auto Vervollständigung", call the Gmaps script - You have to add notice to comply GDPR
+        var script = document.createElement("script");
+        script.src =
+          "https://maps.googleapis.com/maps/api/js?key=<API_KEY>&libraries=places&callback=initAutocomplete&language=de";
+
+        // Append the script element to the head of the document
+        document.head.appendChild(script);
+      }
+    });
+  });
+
+  function initAutocomplete() {
+    // Get references to the starting location, ending location, and distance input elements
+    var starting_location_input = document.getElementById("starting_location");
+    var ending_location_input = document.getElementById("ending_location");
+    var distance_input = document.getElementById("distance");
+
+    // Create new autocomplete objects for the starting and ending location input fields
+    var starting_location_autocomplete = new google.maps.places.Autocomplete(
+      starting_location_input
+    );
+    var ending_location_autocomplete = new google.maps.places.Autocomplete(
+      ending_location_input
+    );
+
+    // Create new geocoder and distance matrix service objects
+    var geocoder = new google.maps.Geocoder();
+    var distance_service = new google.maps.DistanceMatrixService();
+
+    // Attach a listener to the autocomplete objects that calculates the distance between the starting and ending locations whenever they change
+    starting_location_autocomplete.addListener(
+      "place_changed",
+      calculateDistance
+    );
+    ending_location_autocomplete.addListener(
+      "place_changed",
+      calculateDistance
+    );
+
+    function calculateDistance() {
+      var starting_location_value = starting_location_input.value;
+      var ending_location_value = ending_location_input.value;
+      // Get the values of the starting and ending location input fields
+
+      // If both input fields have a value, geocode the starting and ending locations and calculate the distance between them
+      if (starting_location_value && ending_location_value) {
+        // Geocode the starting location
+        geocoder.geocode(
+          { address: starting_location_value },
+          function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+              var starting_location_latlng = results[0].geometry.location;
+
+              // Geocode the ending location
+              geocoder.geocode(
+                { address: ending_location_value },
+                function (results, status) {
+                  if (status == google.maps.GeocoderStatus.OK) {
+                    var ending_location_latlng = results[0].geometry.location;
+
+                    $('input[name="starting_location"]').val(
+                      starting_location_value
+                    );
+                    $('input[name="ending_location"]').val(
+                      ending_location_value
+                    );
+
+                    // Calculate the distance between the starting and ending locations
+                    distance_service.getDistanceMatrix(
+                      {
+                        origins: [starting_location_latlng],
+                        destinations: [ending_location_latlng],
+                        // Driving (car) TravelMode - https://developers.google.com/maps/documentation/transportation-logistics/on-demand-rides-deliveries-solution/pickup-and-dropoff-selection/location-selection/reference/rest/v1beta/TravelMode
+                        travelMode: google.maps.TravelMode.DRIVING,
+                        unitSystem: google.maps.UnitSystem.METRIC,
+                      },
+                      function (response, status) {
+                        if (status == google.maps.DistanceMatrixStatus.OK) {
+                          // Set the value of the distance input field to the calculated distance in kilometers
+                          var distance =
+                            response.rows[0].elements[0].distance.value / 1000;
+                          distance_input.value = distance.toFixed(2) + " km";
+                          $('input[name="starting_location"]').val(
+                            starting_location_value
+                          );
+                          $('input[name="ending_location"]').val(
+                            ending_location_value
+                          );
+                        } else {
+                          alert("Error: " + status);
+                        }
+                      }
+                    );
+                  } else {
+                    alert("Error: " + status);
+                  }
+                }
+              );
+            } else {
+              alert("Error: " + status);
+            }
+          }
+        );
+      }
+    }
+  }
+</script>
